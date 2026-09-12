@@ -54,7 +54,7 @@ function App() {
     formData.append('jd', jdFile);
 
     try {
-      const response = await fetch('http://127.0.0.1:8000/analyze', {
+      const response = await fetch('https://ai-resume-screener-leaderboard.onrender.com/analyze', {
         method: 'POST',
         body: formData,
       });
@@ -77,7 +77,7 @@ function App() {
     formData.append('jd', jdFile);
 
     try {
-      const response = await fetch('http://127.0.0.1:8000/analyze-multi', {
+      const response = await fetch('https://ai-resume-screener-leaderboard.onrender.com/analyze-multi', {
         method: 'POST',
         body: formData,
       });
@@ -134,7 +134,7 @@ function App() {
     setChatLoading(true);
 
     try {
-      const response = await fetch(`http://127.0.0.1:8000/chat?question=${encodeURIComponent(userMessage)}`, {
+      const response = await fetch(`https://ai-resume-screener-leaderboard.onrender.com/chat?question=${encodeURIComponent(userMessage)}`, {
         method: 'POST',
       });
       const data = await response.json();
